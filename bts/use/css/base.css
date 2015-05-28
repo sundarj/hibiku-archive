@@ -1,0 +1,37 @@
+@import "lib/normalize.css";
+@import url(//fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic);
+@import url(//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css);
+
+html { 
+  height: 100%;
+  box-sizing: border-box;
+} *, *::before, *::after { box-sizing: inherit }
+
+body {
+  display: flex;
+  min-height: 100%;
+  font: 100%/1.4 'Noto Sans', sans-serif;
+}
+
+main {
+    min-height: 100%;
+    display: flex;
+    width: 100%;
+    padding: 1.5em;
+    position: relative;
+}
+
+.rsn-sidebar {
+    padding: 2em;
+    width: 40%;
+    min-height: 100%;
+    background: #f1f1f1;
+    box-shadow: 3px 0px 3px -3px rgba(0,0,0,0.3);
+    position: relative;
+    z-index: 5;
+}
+
+.rsn-header {
+    align-self: center;
+    justify-content: flex-start;
+}
