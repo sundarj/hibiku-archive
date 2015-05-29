@@ -12,6 +12,7 @@
     "express": "~4.12.4",
     "compression": "~1.4.4",
     "mongoose": "~4.0.3",
-    "body-parser": "~1.12.4"
+    "body-parser": "~1.12.4",
+    "pegjs": "~0.8.0"
   }
 }
