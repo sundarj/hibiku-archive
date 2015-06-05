@@ -5,14 +5,8 @@ module.exports = {
         "extension": ".hb",
         
         "views": [
-            __dirname + "/../../visage/"   
-        ],
-
-        "syntax": {
-
-            "wrapping": "(( ))",
-
-        }
+            "visage"   
+        ]
 
     },
 

@@ -4,7 +4,7 @@ const bodyParser = require('body-parser');
 
 const utils = require('./utils');
 
-const engine = require('./engine/engine');
+const engine = require('./engine/');
 engine.use(app);
 
 app.get('/', function(req, res) {

@@ -1,5 +1,14 @@
 const fs = require('fs');
-const parse = require('pegjs').buildParser(fs.readFileSync(__dirname + "/./hibiku-parse.pegjs", 'utf-8')).parse;
+const parse = require('pegjs').buildParser(fs.readFileSync(__dirname + "/hibiku-parse.pegjs", 'utf-8')).parse;
+const utils = require('../utils');
+const config = require('../config');
+
+var files = [];
+const extRegex = new RegExp("\\" + config.engine.extension + "$");
+utils.walk(config.engine.views, function (f, s) {
+    f.match(extRegex) && files.push(f.replace(extRegex, ''));
+});
+console.log(files);
 
 var template = {
     files: {
@@ -13,7 +22,6 @@ var template = {
 function render(data) {
     /* get template tags */
     var view = parse(data.split("\n").map(function(line) {
-        line = line.replace(/<\/?[a-z0-9]+?>/gi, '');
         return line.match(/\(\([^]+?\)\)/g);
     }).filter(function(i) { return i }).join("\n"));
     
