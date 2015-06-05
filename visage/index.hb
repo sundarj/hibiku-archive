@@ -1,6 +1,6 @@
 ((>header))
    
-    <h1>lol ((main title))</h1>
+    <h1>((main title))</h1>
 
     <main>
 

@@ -8,11 +8,7 @@ const engine = require('./engine/engine');
 engine.use(app);
 
 app.get('/', function(req, res) {
-    res.render('index', {
-        data: {
-            title: 42
-        }
-    });
+    res.render('index');
 });
 
 app.listen(8080);
