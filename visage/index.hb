@@ -1,4 +1,4 @@
-((>header))
+((>components/header))
    
     <h1>((main title))</h1>
 
@@ -8,4 +8,4 @@
 
     </main>
     
-((>footer))
+((>components/footer))

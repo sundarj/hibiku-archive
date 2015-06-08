@@ -2,6 +2,7 @@ const fs = require('fs');
 const parse = require('pegjs').buildParser(fs.readFileSync(__dirname + "/hibiku-parse.pegjs", 'utf-8')).parse;
 const utils = require('../utils');
 const config = require('../config');
+const path = require('path');
 
 var files = [];
 const extRegex = new RegExp("\\" + config.engine.extension + "$");
@@ -11,10 +12,16 @@ utils.walk(config.engine.views, function (f, s) {
 console.log(files);
 
 var template = {
-    files: {
-        header: '<!doctype html><html lang="en"><head></head><body>',
-        footer: '</body></html>'
-    },
+    files: (function(files) {
+		var ret = {};
+		files.forEach(function(file) {
+			var lastFolder = file.split(path.sep);
+			lastFolder = lastFolder[lastFolder.length-2];
+			var hook = config.engine.views.indexOf(lastFolder) === -1 ? lastFolder + '/' + path.basename(file) : path.basename(file);
+			ret[hook] = fs.readFileSync(file + config.engine.extension, 'utf-8');
+		});
+		return ret;
+	})(files),
     'main title': 'Hello',
     'main content area': 'Yo'
 }
