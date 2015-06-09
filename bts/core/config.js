@@ -5,7 +5,8 @@ module.exports = {
         "extension": ".hb",
         
         "views": [
-            "visage"   
+            "visage",
+            "bts/pages"
         ]
 
     },

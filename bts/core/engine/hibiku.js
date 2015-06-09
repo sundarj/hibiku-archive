@@ -28,9 +28,13 @@ var template = {
 
 function render(data) {
     /* get template tags */
-    var view = parse(data.split("\n").map(function(line) {
-        return line.match(/\(\([^]+?\)\)/g);
-    }).filter(function(i) { return i }).join("\n"));
+    try {
+        var view = parse(data.split("\n").map(function(line) {
+            return line.match(/\(\([^]+?\)\)/g);
+        }).filter(function(i) { return i }).join("\n"));
+    } catch(e) {
+        return data;   
+    }
     
     view.forEach(function(tag) {
         var s = '';

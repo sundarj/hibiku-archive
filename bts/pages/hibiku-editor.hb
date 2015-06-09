@@ -18,9 +18,9 @@
             </header>
 
             <ul class="file-list">
-            {{#each files}}
-                <li class="file" data-page="{{this}}">{{this}}</li>
-            {{/each}}
+            ((:each files))
+                <li class="file" data-page="((:this))">((:this))</li>
+            ((each.))
             </ul>
 
         </aside>
@@ -35,9 +35,9 @@
 
     </main>
 
-<script src="use/js/nest.js"></script>
-<script src="use/js/editor.js"></script>
-<script src="use/js/fields.js"></script>
+    <!--<script src="use/js/nest.js"></script>
+    <script src="use/js/editor.js"></script>
+    <script src="use/js/fields.js"></script>-->
     
 </body>
 </html>
