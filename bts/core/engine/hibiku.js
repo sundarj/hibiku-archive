@@ -21,12 +21,10 @@ var template = {
 			ret[hook] = fs.readFileSync(file + config.engine.extension, 'utf-8');
 		});
 		return ret;
-	})(files),
-    'main title': 'Hello',
-    'main content area': 'Yo'
+	})(files)
 }
 
-function render(data) {
+function render(data, options) {
     /* get template tags */
     try {
         var view = parse(data.split("\n").map(function(line) {
@@ -54,7 +52,7 @@ function render(data) {
         if (token[0] === '>')
             data = data.replace(s, template.files[token.slice(1)]);
         else
-            data = data.replace(s, template[token]);
+            data = data.replace(s, options[token]);
     });
     
     return data;

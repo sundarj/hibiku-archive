@@ -9,7 +9,7 @@ function engine(app) {
     app.engine(config.engine.extension, function(path, options, fn) {
         fs.readFile(path, 'utf-8', function(err, data) {
             if (err) return console.error(err);
-            return fn(null, hibiku.render(data));
+            return fn(null, hibiku.render(data, options));
         });
     });
     

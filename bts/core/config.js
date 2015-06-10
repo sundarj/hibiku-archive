@@ -21,7 +21,8 @@ module.exports = {
     
     "options": {
         
-        "locale": "en-gb"
+        "locale": "en-gb",
+        "frontPage": "index"
         
     }
 
