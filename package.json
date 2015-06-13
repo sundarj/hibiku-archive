@@ -1,18 +1,24 @@
 {
   "name": "hibiku",
-  "version": "0.0.0",
-  "description": "Node.js templating system",
+  "version": "1.0.0",
+  "description": "",
   "main": "index.js",
+  "dependencies": {
+    "compression": "^1.5.0",
+    "hibiku": "^0.0.0"
+  },
+  "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/SundarJ/hibiku.git"
+  },
   "author": "",
-  "license": "BSD",
-  "dependencies": {
-    "express": "~4.12.4",
-    "compression": "~1.4.4",
-    "mongoose": "~4.0.3",
-    "body-parser": "~1.12.4",
-    "pegjs": "~0.8.0"
-  }
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SundarJ/hibiku/issues"
+  },
+  "homepage": "https://github.com/SundarJ/hibiku"
 }
