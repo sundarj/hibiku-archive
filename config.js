@@ -15,7 +15,6 @@ const Configuration = function() {
     this.db = {
      
         "host": "localhost",
-        
         "name": "hibiku"
         
     };
