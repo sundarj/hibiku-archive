@@ -1,5 +1,5 @@
 const hibiku = require('hibiku');
-const compression = require('compression');
+const compress = require('koa-compress');
 
-hibiku.app.use(compression());
+hibiku.use(compress());
 hibiku.listen(process.env.PORT, process.env.IP);
