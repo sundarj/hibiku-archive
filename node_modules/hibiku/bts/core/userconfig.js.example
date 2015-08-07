@@ -1,9 +1,5 @@
-const path = require('path');
-
-const Configuration = function() {
+module.exports = new function() {
     
     this.root = __dirname;
 
 };
-
-module.exports = new Configuration;
