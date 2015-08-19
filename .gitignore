@@ -3,3 +3,5 @@ node_modules/*
 node_modules/hibiku/node_modules
 jsconfig.json
 typings/
+.idea
+npm-debug.log
